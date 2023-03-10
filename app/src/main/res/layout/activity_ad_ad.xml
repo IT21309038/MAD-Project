@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".ad_Ad">
+
+    <TextView
+        android:id="@+id/Txt4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/postAd"
+        android:textAlignment="center"
+        android:textColor="@color/Text"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/ComName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ComName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Cname"
+        android:inputType="textPersonName"
+        android:textColor="@color/Txt"
+        android:textColorHint="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/Position"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt4" />
+
+    <EditText
+        android:id="@+id/Position"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Pos"
+        android:inputType="textPersonName"
+        android:textColor="@color/Txt"
+        android:textColorHint="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/ConMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ComName" />
+
+    <EditText
+        android:id="@+id/ConMail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Cmail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/Txt"
+        android:textColorHint="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/JobDes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Position" />
+
+    <EditText
+        android:id="@+id/JobDes"
+        android:layout_width="0dp"
+        android:layout_height="198dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/JobD"
+        android:inputType="textMultiLine"
+        android:textColor="@color/Txt"
+        android:textColorHint="@color/Txt"
+        android:textSize="32sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/Txt5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConMail" />
+
+    <TextView
+        android:id="@+id/Txt5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Ptype"
+        android:textColor="@color/Txt"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/M1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JobDes" />
+
+    <CheckBox
+        android:id="@+id/M1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/M1"
+        android:textColor="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/M2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt5" />
+
+    <CheckBox
+        android:id="@+id/M2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/M2"
+        android:textColor="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/M3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M1" />
+
+    <CheckBox
+        android:id="@+id/M3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/M3"
+        android:textColor="@color/Txt"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/Btn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M2" />
+
+    <Button
+        android:id="@+id/Btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/BTn"
+        android:text="@string/Pay"
+        android:textColor="@color/Text"
+        android:textSize="32sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/Btn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M3" />
+
+    <Button
+        android:id="@+id/Btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/BTn"
+        android:text="@string/Reset"
+        android:textColor="@color/Text"
+        android:textSize="32sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
