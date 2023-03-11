@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">MAD</string>
+    <string name="welcome">Welcome to රැKia</string>
+    <string name="Log">Login</string>
+    <string name="Reg">Register</string>
+    <string name="RegPoster">Join our system Ad Poster!!!</string>
+    <string name="FName">First Name</string>
+    <string name="Lname">Last Name</string>
+    <string name="Mail">Email</string>
+    <string name="Phn">Phone</string>
+    <string name="Uname">Username</string>
+    <string name="Pwd">Password</string>
+    <string name="Repwd">Retype Password</string>
+    <string name="Sub">Submit</string>
+    <string name="Reset">Reset</string>
+    <string name="LOG">Welcome Ad poster</string>
+    <string name="postAd">Post your Ad here!!!</string>
+    <string name="Cname">Company Name</string>
+    <string name="Pos">Position of job</string>
+    <string name="Cmail">Contact Email</string>
+    <string name="JobD">"Enter job description "</string>
+    <string name="Ptype">Select duration ad should be available</string>
+    <string name="M1">1 month costs 1$</string>
+    <string name="M2">2 month costs 2$</string>
+    <string name="M3">3 months costs 3$</string>
+    <string name="Pay">Pay</string>
+    <string name="Up">Update your Ad details or delete Ad</string>
+    <string name="Up1">Update</string>
+    <string name="Delete">Delete</string>
 </resources>

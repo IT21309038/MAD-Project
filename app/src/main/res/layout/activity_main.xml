@@ -2,17 +2,87 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Welcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#979DAF"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/Logo1"
+        android:layout_width="0dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toTopOf="@+id/Txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logomad" />
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/Txt1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textColor="@color/Text"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Log1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo1" />
+
+    <TextView
+        android:id="@+id/Log1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Log"
+        android:textAlignment="center"
+        android:textColor="@color/Text"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Img1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt1" />
+
+    <TextView
+        android:id="@+id/Reg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Reg"
+        android:textAlignment="center"
+        android:textColor="@color/Text"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Img2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img1" />
+
+    <ImageView
+        android:id="@+id/Img1"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+        app:layout_constraintBottom_toTopOf="@+id/Reg1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Log1"
+        app:srcCompat="@drawable/icons8_forward_button_64" />
+
+    <ImageView
+        android:id="@+id/Img2"
+        android:layout_width="0dp"
+        android:layout_height="94dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/Reg1"
+        app:srcCompat="@drawable/icons8_forward_button_64__1_" />
 </androidx.constraintlayout.widget.ConstraintLayout>
