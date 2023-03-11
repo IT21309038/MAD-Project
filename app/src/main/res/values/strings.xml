@@ -27,4 +27,11 @@
     <string name="Up">Update your Ad details or delete Ad</string>
     <string name="Up1">Update</string>
     <string name="Delete">Delete</string>
+    <string name="WPost">Welcome Ad Poster</string>
+    <string name="WNm">Ad Poster Name</string>
+    <string name="Vac">Posted Vacancies will be displayed when button clicked</string>
+    <string name="Int">Viewer interests will be diplayed on button click</string>
+    <string name="AdAd">Add Ad</string>
+    <string name="UpDe">Update/Delete Ad</string>
+    <string name="DeProf">Delete Profile</string>
 </resources>
