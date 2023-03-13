@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Scroll1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        tools:context=".AdminDash">
+
+
+        <TextView
+            android:id="@+id/Txt18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Wadmin"
+            android:textAlignment="center"
+            android:textColor="@color/Text"
+            android:textSize="32sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/Txt19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Txt19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:hint="@string/Adname"
+            android:textAlignment="center"
+            android:textColorHint="@color/Txt"
+            android:textSize="32sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Txt20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt18" />
+
+        <TextView
+            android:id="@+id/Txt20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/Vfeed"
+            android:textAlignment="textStart"
+            android:textColor="@color/Text"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Re1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt19" />
+
+        <Button
+            android:id="@+id/Btn10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/BTn"
+            android:text="@string/Vinq"
+            android:textColor="@color/Text"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Txt21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Re1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Re1"
+            android:layout_width="0dp"
+            android:layout_height="424dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/Btn10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt20" />
+
+        <EditText
+            android:id="@+id/Txt21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="@string/Ejob"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/Txt"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Btn11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Btn10" />
+
+        <Button
+            android:id="@+id/Btn11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/BTn"
+            android:text="@string/Dejob"
+            android:textColor="@color/Text"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/Btn12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt21" />
+
+        <Button
+            android:id="@+id/Btn12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/BTn"
+            android:text="@string/Uppass"
+            android:textAlignment="center"
+            android:textColor="@color/Text"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Btn11" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

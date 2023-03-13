@@ -48,4 +48,11 @@
     <string name="Npwd">Enter new Password</string>
     <string name="Rnpwd">Re Enter new Password</string>
     <string name="Up2">Update Password</string>
+    <string name="Wadmin">Welcome Admin!!!</string>
+    <string name="Adname">Name of admin</string>
+    <string name="Vfeed">Available feedbacks are :-</string>
+    <string name="Vinq">View Inquiries</string>
+    <string name="Ejob">Enter job ID</string>
+    <string name="Dejob">Delete Job</string>
+    <string name="Uppass">Update Password</string>
 </resources>
