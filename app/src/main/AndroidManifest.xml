@@ -27,16 +27,16 @@
             android:name=".AdPostDash"
             android:exported="false" />
         <activity
-            android:name=".Ad_update_delete"
+            android:name=".AdUpdateDelete"
             android:exported="false" />
         <activity
             android:name=".AdPostReg"
             android:exported="false" />
         <activity
-            android:name=".ad_post_log"
+            android:name=".AdPostLog"
             android:exported="false" />
         <activity
-            android:name=".ad_ad"
+            android:name=".AdAd"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

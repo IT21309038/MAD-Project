@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".ad_post_log">
+    tools:context=".AdPostLog">
 
     <ImageView
         android:id="@+id/logo1"
-        android:layout_width="0dp"
-        android:layout_height="157dp"
+        android:layout_width="@dimen/LogoW"
+        android:layout_height="@dimen/LogoH"
         app:layout_constraintBottom_toTopOf="@+id/Txt3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="LogoW">0dp</dimen>
+    <dimen name="LogoH">126dp</dimen>
+    <dimen name="RArraowW">0dp</dimen>
+    <dimen name="RArrowH">93dp</dimen>
+    <dimen name="LArrowW">0dp</dimen>
+    <dimen name="LArrowH">94dp</dimen>
+    <dimen name="WelTxtW">0dp</dimen>
+    <dimen name="ImgW">0dp</dimen>
+    <dimen name="ImgH">163dp</dimen>
+    <dimen name="BtnW">0dp</dimen>
+</resources>

@@ -55,8 +55,8 @@
 
         <ImageView
             android:id="@+id/Img3"
-            android:layout_width="115dp"
-            android:layout_height="98dp"
+            android:layout_width="@dimen/ImgW"
+            android:layout_height="@dimen/ImgH"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/Txt8"
@@ -86,8 +86,8 @@
 
         <ImageView
             android:id="@+id/Img4"
-            android:layout_width="111dp"
-            android:layout_height="92dp"
+            android:layout_width="@dimen/ImgW"
+            android:layout_height="@dimen/ImgH"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/Txt9"

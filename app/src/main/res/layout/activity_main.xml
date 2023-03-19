@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/Logo1"
-        android:layout_width="0dp"
-        android:layout_height="126dp"
+        android:layout_width="@dimen/LogoW"
+        android:layout_height="@dimen/LogoH"
         app:layout_constraintBottom_toTopOf="@+id/Txt1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/Txt1"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/WelTxtW"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textAlignment="center"
@@ -66,8 +66,8 @@
 
     <ImageView
         android:id="@+id/Img1"
-        android:layout_width="0dp"
-        android:layout_height="93dp"
+        android:layout_width="@dimen/RArraowW"
+        android:layout_height="@dimen/RArrowH"
         app:layout_constraintBottom_toTopOf="@+id/Reg1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -77,8 +77,8 @@
 
     <ImageView
         android:id="@+id/Img2"
-        android:layout_width="0dp"
-        android:layout_height="94dp"
+        android:layout_width="@dimen/LArrowW"
+        android:layout_height="@dimen/LArrowH"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

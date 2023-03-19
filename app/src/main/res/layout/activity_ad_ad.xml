@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".ad_ad">
+    tools:context=".AdAd">
 
     <TextView
         android:id="@+id/Txt4"
@@ -149,7 +149,7 @@
 
     <Button
         android:id="@+id/Btn3"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/BtnW"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/BTn"
         android:text="@string/Pay"
@@ -164,7 +164,7 @@
 
     <Button
         android:id="@+id/Btn4"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/BtnW"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/BTn"
         android:text="@string/Reset"
