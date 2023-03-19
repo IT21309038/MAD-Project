@@ -149,8 +149,8 @@
 
     <Button
         android:id="@+id/Btn3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/BtnW"
+        android:layout_height="@dimen/BtnH"
         android:backgroundTint="@color/BTn"
         android:text="@string/Pay"
         android:textColor="@color/Text"
@@ -164,8 +164,8 @@
 
     <Button
         android:id="@+id/Btn4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/BtnW"
+        android:layout_height="@dimen/BtnH"
         android:backgroundTint="@color/BTn"
         android:text="@string/Reset"
         android:textColor="@color/Text"
