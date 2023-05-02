@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/Txt2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/RegPoster"
         android:textAlignment="center"
         android:textColor="@color/Text"
@@ -26,7 +26,7 @@
     <EditText
         android:id="@+id/Fname"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/FName"
         android:inputType="textPersonName"
@@ -44,7 +44,7 @@
     <EditText
         android:id="@+id/Lname"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/Lname"
         android:inputType="textPersonName"
@@ -61,7 +61,7 @@
     <EditText
         android:id="@+id/Email"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/Mail"
         android:inputType="textEmailAddress"
@@ -78,27 +78,10 @@
     <EditText
         android:id="@+id/Phone"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/Phn"
         android:inputType="phone"
-        android:textColor="@color/Txt"
-        android:textColorHint="@color/Txt"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/Uname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
-
-    <EditText
-        android:id="@+id/Uname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/Uname"
-        android:inputType="textPersonName"
         android:textColor="@color/Txt"
         android:textColorHint="@color/Txt"
         android:textSize="24sp"
@@ -107,12 +90,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
 
     <EditText
         android:id="@+id/Pwd"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/Pwd"
         android:inputType="textPassword"
@@ -124,12 +107,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Uname" />
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
 
     <EditText
         android:id="@+id/Repwd"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:hint="@string/Repwd"
         android:inputType="textPassword"
@@ -145,8 +128,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
         android:backgroundTint="@color/BTn"
         android:text="@string/Sub"
         android:textColor="@color/Text"
@@ -160,8 +143,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
         android:backgroundTint="@color/BTn"
         android:text="@string/Reset"
         android:textColor="@color/Text"
