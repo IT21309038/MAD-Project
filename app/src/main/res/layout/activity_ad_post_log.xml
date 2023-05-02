@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-    tools:context=".ad_post_log">
+    tools:context=".AdPostLog">
 
     <ImageView
         android:id="@+id/logo1"

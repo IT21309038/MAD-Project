@@ -6,10 +6,8 @@
     <dimen name="RArrowH">93dp</dimen>
     <dimen name="LArrowW">0dp</dimen>
     <dimen name="LArrowH">94dp</dimen>
-    <dimen name="WelTxtH">wrap_content</dimen>
     <dimen name="WelTxtW">0dp</dimen>
     <dimen name="ImgW">0dp</dimen>
     <dimen name="ImgH">163dp</dimen>
-    <dimen name="BtnH">wrap_content</dimen>
     <dimen name="BtnW">0dp</dimen>
 </resources>

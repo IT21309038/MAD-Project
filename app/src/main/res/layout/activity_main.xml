@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/Txt1"
         android:layout_width="@dimen/WelTxtW"
-        android:layout_height="@dimen/WelTxtH"
+        android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textAlignment="center"
         android:textColor="@color/Text"
