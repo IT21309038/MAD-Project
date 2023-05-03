@@ -2,6 +2,7 @@ package com.example.mad
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.*
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -27,6 +28,9 @@ class AdAd : AppCompatActivity() {
         val m3RadioButton = findViewById<RadioButton>(R.id.M3)
         val durationRadioGroup = findViewById<RadioGroup>(R.id.Due)
         val btn3 = findViewById<Button>(R.id.Btn3)
+        val btn4 = findViewById<Button>(R.id.Btn4)
+
+
 
         // Set a click listener on the button
         btn3.setOnClickListener {
@@ -58,14 +62,42 @@ class AdAd : AppCompatActivity() {
             jobDesEditText.setText("")
             durationRadioGroup.clearCheck()
         }
+
+        btn4.setOnClickListener {
+            // Get references to the UI elements
+            val comNameEditText = findViewById<EditText>(R.id.ComName)
+            val positionEditText = findViewById<EditText>(R.id.Position)
+            val conMailEditText = findViewById<EditText>(R.id.ConMail)
+            val jobDesEditText = findViewById<EditText>(R.id.JobDes)
+            val m1RadioButton = findViewById<RadioButton>(R.id.M1)
+            val m2RadioButton = findViewById<RadioButton>(R.id.M2)
+            val m3RadioButton = findViewById<RadioButton>(R.id.M3)
+            val durationRadioGroup = findViewById<RadioGroup>(R.id.Due)
+
+            // Clear the text in all EditText views
+            comNameEditText.text.clear()
+            positionEditText.text.clear()
+            conMailEditText.text.clear()
+            jobDesEditText.text.clear()
+
+            // Clear the checked radio button in the RadioGroup
+            durationRadioGroup.clearCheck()
+        }
     }
+
+
+
+
 
     private fun getDurationString(checkedRadioButtonId: Int): String {
         return when (checkedRadioButtonId) {
-            R.id.M1 -> "1$-1 month"
-            R.id.M2 -> "2$-2 months"
-            R.id.M3 -> "3$-3 months"
+            R.id.M1 -> "1 month"
+            R.id.M2 -> "2 months"
+            R.id.M3 -> "3 months"
             else -> ""
+
+
+
         }
     }
 }
