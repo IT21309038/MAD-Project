@@ -17,4 +17,9 @@
     <color name="stat">#25597f</color>
     <color name="Hint">#C9C0BB</color>
     <color name="Ht">#778BA5</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sub">#868080</color>
+    <color name="txt">#083568</color>
+    <color name="btn">#7681AE</color>
+
 </resources>
