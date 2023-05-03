@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/Txt4"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/postAd"
         android:textAlignment="center"
@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/ComName"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Cname"
@@ -41,7 +41,7 @@
 
     <EditText
         android:id="@+id/Position"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Pos"
@@ -58,7 +58,7 @@
 
     <EditText
         android:id="@+id/ConMail"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Cmail"
@@ -75,7 +75,7 @@
 
     <EditText
         android:id="@+id/JobDes"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="198dp"
         android:ems="10"
         android:gravity="start|top"
@@ -93,59 +93,17 @@
 
     <TextView
         android:id="@+id/Txt5"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/Ptype"
         android:textColor="@color/Txt"
         android:textSize="20sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/M1"
+        app:layout_constraintBottom_toTopOf="@+id/Due"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/JobDes" />
-
-    <CheckBox
-        android:id="@+id/M1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/M1"
-        android:textColor="@color/Txt"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/M2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Txt5" />
-
-    <CheckBox
-        android:id="@+id/M2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/M2"
-        android:textColor="@color/Txt"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/M3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M1" />
-
-    <CheckBox
-        android:id="@+id/M3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/M3"
-        android:textColor="@color/Txt"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/Btn3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M2" />
 
     <Button
         android:id="@+id/Btn3"
@@ -160,7 +118,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M3" />
+        app:layout_constraintTop_toBottomOf="@+id/Due" />
 
     <Button
         android:id="@+id/Btn4"
@@ -176,4 +134,39 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Btn3" />
+
+    <RadioGroup
+        android:id="@+id/Due"
+        android:layout_width="384dp"
+        android:layout_height="145dp"
+        app:layout_constraintBottom_toTopOf="@+id/Btn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt5">
+
+        <RadioButton
+            android:id="@+id/M1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/M1"
+            android:textColor="@color/Text"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/M2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/M2"
+            android:textColor="@color/Text"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/M3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/M3"
+            android:textColor="@color/Text"
+            android:textSize="24sp" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
