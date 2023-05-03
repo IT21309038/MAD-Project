@@ -23,11 +23,6 @@ class AdPostLog : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ad_post_log)
 
-        val btn8 = findViewById<Button>(R.id.Btn8)
-        btn8.setOnClickListener {
-            val intent = Intent(this@AdPostLog, ForgotPassword::class.java)
-            startActivity(intent)
-        }
 
         auth = FirebaseAuth.getInstance()
         enterUsermail = findViewById(R.id.Uname1)
