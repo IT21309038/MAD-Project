@@ -39,7 +39,7 @@ class AdPostReg : AppCompatActivity() {
         enterPhone = findViewById(R.id.Phone)
         enterPassword = findViewById(R.id.Pwd)
         reEnterPassword = findViewById(R.id.Repwd)
-        submit = findViewById(R.id.button)
+        submit = findViewById(R.id.buttonlog1)
 
 
 
