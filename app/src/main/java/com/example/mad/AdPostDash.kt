@@ -82,11 +82,7 @@ class AdPostDash : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btn6 = findViewById<Button>(R.id.Btn6)
-        btn6.setOnClickListener {
-            val intent = Intent(this@AdPostDash, AdUpdateDelete::class.java)
-            startActivity(intent)
-        }
+
     }
 
 
