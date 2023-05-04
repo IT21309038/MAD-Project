@@ -13,9 +13,11 @@ import com.google.firebase.database.*
 class AdPostDash : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
-    private lateinit var dbref : DatabaseReference
-    private lateinit var userRecyclerview : RecyclerView
-    private lateinit var jobsArrayList : ArrayList<Jobs>
+    private lateinit var dbref: DatabaseReference
+    private lateinit var userRecyclerview: RecyclerView
+    private lateinit var jobsArrayList: ArrayList<Jobs>
+    private lateinit var adapter: MyAdapter // Add adapter property
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ad_post_dash)
@@ -26,7 +28,11 @@ class AdPostDash : AppCompatActivity() {
         userRecyclerview.setHasFixedSize(true)
 
         jobsArrayList = arrayListOf<Jobs>()
+        adapter = MyAdapter(jobsArrayList, FirebaseDatabase.getInstance().getReference("jobs"), this)
+        userRecyclerview.adapter = adapter
+
         getUserData()
+
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference.child("users")
@@ -47,11 +53,19 @@ class AdPostDash : AppCompatActivity() {
                         }
                         .addOnFailureListener {
                             // Deletion of associated data failed, display error message
-                            Toast.makeText(this@AdPostDash, "Failed to delete user data. Please try again.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@AdPostDash,
+                                "Failed to delete user data. Please try again.",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                 } else {
                     // Delete failed, display error message
-                    Toast.makeText(this@AdPostDash, "Failed to delete user profile. Please try again.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@AdPostDash,
+                        "Failed to delete user profile. Please try again.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
@@ -75,25 +89,32 @@ class AdPostDash : AppCompatActivity() {
         }
     }
 
+
     private fun getUserData() {
         val currentUserUid = auth.currentUser!!.uid
         dbref = FirebaseDatabase.getInstance().getReference("jobs")
 
-        dbref.orderByChild("uid").equalTo(currentUserUid).addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    jobsArrayList.clear()
-                    for (jobSnapshot in snapshot.children) {
-                        val jobs = jobSnapshot.getValue(Jobs::class.java)
-                        jobsArrayList.add(jobs!!)
+        dbref.orderByChild("uid").equalTo(currentUserUid)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        jobsArrayList.clear()
+                        for (jobSnapshot in snapshot.children) {
+                            val jobs = jobSnapshot.getValue(Jobs::class.java)
+                            jobsArrayList.add(jobs!!)
+                        }
+                        adapter.notifyDataSetChanged() // Notify adapter that data set has changed
                     }
-                    userRecyclerview.adapter = MyAdapter(jobsArrayList, dbref)
                 }
-            }
 
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@AdPostDash, "Failed to retrieve user data. Please try again.", Toast.LENGTH_SHORT).show()
-            }
-        })
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(
+                        this@AdPostDash,
+                        "Failed to retrieve user data. Please try again.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
     }
 }
+

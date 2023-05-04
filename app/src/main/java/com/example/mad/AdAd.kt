@@ -95,10 +95,6 @@ class AdAd : AppCompatActivity() {
         }
     }
 
-
-
-
-
     private fun getDurationString(checkedRadioButtonId: Int): String {
         return when (checkedRadioButtonId) {
             R.id.M1 -> "1 month"
