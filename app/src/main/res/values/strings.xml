@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">MAD</string>
-    <string name="welcome">Welcome to රැKia</string>
+    <string name="app_name">MAD-Poject</string>
     <string name="Log">Login</string>
     <string name="Reg">Register</string>
     <string name="RegPoster">Join our system Ad Poster!!!</string>
@@ -55,4 +54,44 @@
     <string name="Ejob">Enter job ID</string>
     <string name="Dejob">Delete Job</string>
     <string name="Uppass">Update Password</string>
+
+
+    <string name="title_activity_admin_login">Admin_login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="intt">If you\'re interested !!</string>
+    <string name="infor">Enter your information here, and we\'ll give you our details so you can learn more about this position.</string>
+    <string name="name">Name</string>
+    <string name="hint1">user</string>
+    <string name="jobid">Job ID</string>
+    <string name="hint2">000000</string>
+    <string name="email">E-mail address</string>
+    <string name="hint3">user123@gmail.com</string>
+    <string name="pn">Phone number</string>
+    <string name="hint4">+94*********</string>
+    <string name="btn1">Confirm</string>
+    <string name="Wad">Welcome adviewer</string>
+    <string name="add"><![CDATA[<Display ads>]]></string>
+    <string name="addInt">Add interest</string>
+    <string name="und">Update / Delete</string>
+    <string name="delete">Delete account</string>
+    <string name="login">Login to the system</string>
+    <string name="password">password</string>
+    <string name="loginad">Login as admin</string>
+    <string name="textName">editTextTextPersonName</string>
+    <string name="p_hint">*********</string>
+    <string name="pn_hint">+94*********</string>
+    <string name="update">Confirm update</string>
+    <string name="delete_ad">Delete ad</string>
+    <string name="del">Delete ad</string>
+    <string name="dis_del">Can you please share us what was not working? we are fixing bugs as soon as we spot them. If something slipped through our fingers we\'d be grateful to be aware of it and fix it.</string>
+    <string name="explain1">Your explanation is entirely optional</string>
+    <string name="confirm_del">Confirm deletion</string>
+
 </resources>

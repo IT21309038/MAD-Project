@@ -16,5 +16,18 @@ class CommonLog : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val img5: ImageView = findViewById(R.id.Img5)
+        img5.setOnClickListener {
+            val intent = Intent(this@CommonLog, Admin_login::class.java)
+            startActivity(intent)
+        }
+
+        val img6: ImageView = findViewById(R.id.Img6)
+        img6.setOnClickListener {
+            val intent = Intent(this@CommonLog, Ad_viewer_ui::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
