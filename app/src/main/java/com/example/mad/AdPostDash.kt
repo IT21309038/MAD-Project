@@ -5,16 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class AdPostDash : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
-
+    private lateinit var dbref : DatabaseReference
+    private lateinit var userRecyclerview : RecyclerView
+    private lateinit var jobsArrayList : ArrayList<Jobs>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ad_post_dash)
+
+        auth = FirebaseAuth.getInstance()
+        userRecyclerview = findViewById(R.id.RC1)
+        userRecyclerview.layoutManager = LinearLayoutManager(this)
+        userRecyclerview.setHasFixedSize(true)
+
+        jobsArrayList = arrayListOf<Jobs>()
+        getUserData()
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference.child("users")
@@ -61,5 +73,27 @@ class AdPostDash : AppCompatActivity() {
             val intent = Intent(this@AdPostDash, AdUpdateDelete::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun getUserData() {
+        val currentUserUid = auth.currentUser!!.uid
+        dbref = FirebaseDatabase.getInstance().getReference("jobs")
+
+        dbref.orderByChild("uid").equalTo(currentUserUid).addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    jobsArrayList.clear()
+                    for (jobSnapshot in snapshot.children) {
+                        val jobs = jobSnapshot.getValue(Jobs::class.java)
+                        jobsArrayList.add(jobs!!)
+                    }
+                    userRecyclerview.adapter = MyAdapter(jobsArrayList, dbref)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@AdPostDash, "Failed to retrieve user data. Please try again.", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

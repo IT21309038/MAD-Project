@@ -53,8 +53,7 @@
             android:id="@+id/Btn5"
             android:layout_width="250dp"
             android:layout_height="90dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/BTn"
             android:text="@string/AdAd"
             android:textColor="@color/Text"
@@ -64,13 +63,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RC2" />
+            app:layout_constraintTop_toBottomOf="@+id/RC1" />
 
         <Button
             android:id="@+id/Btn6"
             android:layout_width="250dp"
             android:layout_height="90dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/BTn"
             android:text="@string/UpDe"
             android:textColor="@color/Text"
@@ -86,7 +85,8 @@
             android:id="@+id/Btn7"
             android:layout_width="250dp"
             android:layout_height="90dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/BTn"
             android:text="@string/DeProf"
             android:textColor="@color/Text"
@@ -102,7 +102,7 @@
             android:id="@+id/Btn8"
             android:layout_width="250dp"
             android:layout_height="90dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/BTn"
             android:text="@string/Clk"
             android:textColor="@color/Text"
@@ -116,23 +116,15 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RC1"
-            android:layout_width="408dp"
-            android:layout_height="243dp"
-            app:layout_constraintBottom_toTopOf="@+id/RC2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Txt7" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RC2"
-            android:layout_width="409dp"
-            android:layout_height="304dp"
+            android:layout_width="412dp"
+            android:layout_height="544dp"
+            android:clipToPadding="false"
             app:layout_constraintBottom_toTopOf="@+id/Btn5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/RC1" />
+            app:layout_constraintTop_toBottomOf="@+id/Txt7"
+            tools:listitem="@layout/jobcard"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class AdAd : AppCompatActivity() {
     // Define the Firebase database reference
     private lateinit var database: DatabaseReference
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +19,7 @@ class AdAd : AppCompatActivity() {
 
         // Get a reference to the Firebase database
         database = FirebaseDatabase.getInstance().reference
+        auth = FirebaseAuth.getInstance()
 
         // Get references to the UI elements
         val comNameEditText = findViewById<EditText>(R.id.ComName)
@@ -33,6 +36,7 @@ class AdAd : AppCompatActivity() {
 
 
         // Set a click listener on the button
+        // Set a click listener on the button
         btn3.setOnClickListener {
             // Get the values of the UI elements
             val comName = comNameEditText.text.toString()
@@ -41,11 +45,16 @@ class AdAd : AppCompatActivity() {
             val jobDes = jobDesEditText.text.toString()
             val duration = getDurationString(durationRadioGroup.checkedRadioButtonId)
 
-            // Create a Job object
-            val job = Job(comName, position, conMail, jobDes, duration)
+            // Get the current user's UID
+            val uid = auth.currentUser?.uid
 
-            // Save the job object to the database
-            database.child("jobs").push().setValue(job.toMap())
+            // Create a Job object
+            val job = Job(null, comName, position, conMail, jobDes, duration, uid)
+
+            // Save the job object to the database with a unique ID
+            val newJobRef = database.child("jobs").push()
+            job.id = newJobRef.key
+            newJobRef.setValue(job.toMap())
                 .addOnSuccessListener {
                     // Show a toast message when the data is successfully added
                     Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
@@ -62,6 +71,7 @@ class AdAd : AppCompatActivity() {
             jobDesEditText.setText("")
             durationRadioGroup.clearCheck()
         }
+
 
         btn4.setOnClickListener {
             // Get references to the UI elements
@@ -104,19 +114,23 @@ class AdAd : AppCompatActivity() {
 
 // Define a data class to represent a job
 data class Job(
-    val comName: String = "",
-    val position: String = "",
-    val conMail: String = "",
-    val jobDes: String = "",
-    val duration: String = ""
+    var id: String? = null,
+    var comName: String? = null,
+    var conMail: String? = null,
+    var jobDes: String? = null,
+    var position: String? = null,
+    var duration: String? = null,
+    var uid: String? = null
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
+            "id" to id,
             "comName" to comName,
             "position" to position,
             "conMail" to conMail,
             "jobDes" to jobDes,
-            "duration" to duration
+            "duration" to duration,
+            "uid" to uid
         )
     }
 }
