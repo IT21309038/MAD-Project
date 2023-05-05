@@ -13,34 +13,17 @@
         android:layout_width="413dp"
         android:layout_height="524dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/ad_int_btn"
+        app:layout_constraintBottom_toTopOf="@+id/SHin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_adviewer"
         tools:listitem="@layout/jvcard" />
 
     <Button
-        android:id="@+id/ad_int_btn"
-        android:layout_width="182dp"
-        android:layout_height="63dp"
-        android:backgroundTint="@color/BTN"
-        android:text="@string/addInt"
-        android:textColor="@color/text"
-        android:textColorHighlight="#070707"
-        android:textColorLink="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/del_upd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AVRC" />
-
-    <Button
-        android:id="@+id/del_upd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/SHin"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:backgroundTint="@color/BTN"
         android:text="@string/und"
         android:textColor="@color/text"
@@ -50,12 +33,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ad_int_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/AVRC" />
 
     <Button
         android:id="@+id/del_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:backgroundTint="@color/BTN"
         android:text="@string/delete"
         android:textColor="@color/text"
@@ -65,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/del_upd" />
+        app:layout_constraintTop_toBottomOf="@+id/SHin" />
 
     <TextView
         android:id="@+id/welcome_adviewer"

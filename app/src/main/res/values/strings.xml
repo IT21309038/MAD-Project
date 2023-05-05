@@ -79,7 +79,7 @@
     <string name="Wad">Welcome adviewer</string>
     <string name="add"><![CDATA[<Display ads>]]></string>
     <string name="addInt">Add interest</string>
-    <string name="und">Update / Delete</string>
+    <string name="und">View Interest</string>
     <string name="delete">Delete account</string>
     <string name="login">Login to the system</string>
     <string name="password">password</string>
@@ -93,5 +93,13 @@
     <string name="dis_del">Can you please share us what was not working? we are fixing bugs as soon as we spot them. If something slipped through our fingers we\'d be grateful to be aware of it and fix it.</string>
     <string name="explain1">Your explanation is entirely optional</string>
     <string name="confirm_del">Confirm deletion</string>
+    <string name="A10">"WELCOME "</string>
+    <string name="A11">Ad Viewer</string>
+    <string name="H7">Enter your email</string>
+    <string name="A12">Email</string>
+    <string name="A13">Password</string>
+    <string name="H8">********</string>
+    <string name="A14">LOGIN</string>
+    <string name="A15">Forget Password?</string>
 
 </resources>

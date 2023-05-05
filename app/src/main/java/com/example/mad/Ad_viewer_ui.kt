@@ -22,24 +22,18 @@ class Ad_viewer_ui : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ad_viewer_ui)
 
+        val Buton: Button = findViewById(R.id.SHin)
+        Buton.setOnClickListener {
+            val intent = Intent(this@Ad_viewer_ui, CommonReg::class.java)
+            startActivity(intent)
+        }
+
         userRecyclerview = findViewById(R.id.AVRC)
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
         SHJobsArrayList = arrayListOf<SHJobs>()
         getUserData()
-
-        ad_int_btn = findViewById(R.id.ad_int_btn)
-        del_upd = findViewById(R.id.del_upd)
-
-        ad_int_btn.setOnClickListener {
-            val intent = Intent(this, Add_interest::class.java)
-            startActivity(intent)
-        }
-        del_upd.setOnClickListener {
-            val intent = Intent(this, D_n_U::class.java)
-            startActivity(intent)
-        }
 
 
     }
