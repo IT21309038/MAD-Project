@@ -22,5 +22,12 @@ class CommonLog : AppCompatActivity() {
                 startActivity(intent)
             }
 
+        val img6: ImageView = findViewById(R.id.Img6)
+        img6.setOnClickListener {
+            val intent = Intent(this@CommonLog, AdminInquiry::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

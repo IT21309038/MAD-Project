@@ -30,7 +30,7 @@ class AddViewerReg : AppCompatActivity() {
         setContentView(R.layout.activity_add_viewer_reg)
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        usersRef = database.getReference("viwer")
+        usersRef = database.getReference("viewer")
 
 
         enterFullname = findViewById(R.id.hint1)

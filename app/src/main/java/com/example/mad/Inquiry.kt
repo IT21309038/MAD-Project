@@ -51,6 +51,7 @@ class Inquiry : AppCompatActivity() {
             PhoneEditText.setText("")
             MessageEditText.setText("")
         }
+
     }
 }
 
@@ -62,7 +63,7 @@ data class InquiryModel(
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "email" to email,
-            "position" to Phone,
+            "Phone" to Phone,
             "message" to message
             )
         }
