@@ -1,6 +1,6 @@
 package com.example.mad
 
-data class User(
+data class SHJobs(
     var id: String? = null,
     var comName: String? = null,
     var conMail: String? = null,

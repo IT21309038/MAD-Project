@@ -7,16 +7,14 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.database.*
-import java.security.AccessController
 
 class Ad_viewer_ui : AppCompatActivity() {
     private lateinit var  ad_int_btn: Button
     private lateinit var del_upd: Button
     private lateinit var dbref : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
-    private lateinit var userArrayList : ArrayList<User>
+    private lateinit var SHJobsArrayList : ArrayList<SHJobs>
 
 
     @SuppressLint("MissingInflatedId")
@@ -28,7 +26,7 @@ class Ad_viewer_ui : AppCompatActivity() {
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
-        userArrayList = arrayListOf<User>()
+        SHJobsArrayList = arrayListOf<SHJobs>()
         getUserData()
 
         ad_int_btn = findViewById(R.id.ad_int_btn)
@@ -59,12 +57,12 @@ class Ad_viewer_ui : AppCompatActivity() {
                     for (userSnapshot in snapshot.children){
 
 
-                        val user = userSnapshot.getValue(User::class.java)
-                        userArrayList.add(user!!)
+                        val SHJobs = userSnapshot.getValue(SHJobs::class.java)
+                        SHJobsArrayList.add(SHJobs!!)
 
                     }
 
-                    userRecyclerview.adapter = Adapter(userArrayList)
+                    userRecyclerview.adapter = Adapter(SHJobsArrayList)
 
 
                 }
