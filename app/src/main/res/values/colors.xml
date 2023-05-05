@@ -21,5 +21,9 @@
     <color name="sub">#868080</color>
     <color name="txt">#083568</color>
     <color name="btn">#7681AE</color>
+    <color name="binn" />
+    <color name="bin">#9DF5F2</color>
+    <color name="deletee">#ACD3E3</color>
+    <color name="delbtn">#B80D0D</color>
 
 </resources>

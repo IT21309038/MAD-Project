@@ -1,12 +1,12 @@
-package com.example.firebaserecyclerviewkotlin
+package com.example.mad
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mad.Iqview
-import com.example.mad.R
+import com.google.firebase.database.DatabaseReference
 
 class ViewInquiry(private val inquiryList : ArrayList<Iqview>) : RecyclerView.Adapter<ViewInquiry.MyViewHolder>() {
 
@@ -29,6 +29,14 @@ class ViewInquiry(private val inquiryList : ArrayList<Iqview>) : RecyclerView.Ad
         holder.phone.text = currentitem.phone
         holder.message.text = currentitem.message
 
+        holder.deleteJob.setOnClickListener {
+            // Remove job from UI
+            inquiryList.removeAt(position)
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position, inquiryList.size)
+
+
+        }
     }
 
     override fun getItemCount(): Int {
@@ -42,6 +50,7 @@ class ViewInquiry(private val inquiryList : ArrayList<Iqview>) : RecyclerView.Ad
         val email: TextView = itemView.findViewById(R.id.em)
         val phone: TextView = itemView.findViewById(R.id.pho)
         val message: TextView = itemView.findViewById(R.id.mess)
+        val deleteJob: ImageView = itemView.findViewById(R.id.bin)
 
     }
 

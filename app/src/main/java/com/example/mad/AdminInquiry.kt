@@ -2,13 +2,8 @@ package com.example.mad
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.firebaserecyclerviewkotlin.ViewInquiry
 import com.google.firebase.database.*
 
 class AdminInquiry : AppCompatActivity() {
@@ -27,6 +22,8 @@ class AdminInquiry : AppCompatActivity() {
 
         inquiryArrayList = arrayListOf<Iqview>()
         getInquiryData()
+
+
     }
     private fun getInquiryData() {
 
@@ -45,6 +42,7 @@ class AdminInquiry : AppCompatActivity() {
                     }
                     inquiryRecyclerview.adapter = ViewInquiry(inquiryArrayList)
                 }
+
             }
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
