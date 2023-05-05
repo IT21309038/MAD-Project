@@ -42,14 +42,14 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Position: "
+                android:text="Job Description: "
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -99,7 +99,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Company Mail: "
+                android:text="Position: "
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold" />

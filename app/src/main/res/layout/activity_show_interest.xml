@@ -8,11 +8,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/SHInt"
-        android:layout_width="409dp"
-        android:layout_height="889dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/intshow"/>
+        tools:listitem="@layout/intshow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,5 +6,5 @@ data class SHJobs(
     var conMail: String? = null,
     var jobDes: String? = null,
     var position: String? = null,
-    var uid: String? = null
+    var jobData: String? = null
 )

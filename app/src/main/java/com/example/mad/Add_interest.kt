@@ -59,13 +59,17 @@ class Add_interest : AppCompatActivity() {
                         "AdViewerName" to user,
                         "Email" to eHint,
                         "Phone Number" to phHint,
-                        "UserUID" to currentUserUid,
-                        "interestId" to interestsRef.push().key.toString()
+                        "UserUID" to currentUserUid
                     )
 
                     // Generate a new interest ID and store the interest data under the "interests" table
-                    val newInterestRef = interestsRef.push()
+                    val newInterestKey = interestsRef.push().key.toString()
+                    val newInterestRef = interestsRef.child(newInterestKey)
                     newInterestRef.setValue(interestData)
+
+                    // Set the interest ID generated locally as the key for the interest data node
+                    interestData["interestId"] = newInterestKey
+                    newInterestRef.updateChildren(interestData as Map<String, Any>)
 
                     // Finish the activity
                     finish()

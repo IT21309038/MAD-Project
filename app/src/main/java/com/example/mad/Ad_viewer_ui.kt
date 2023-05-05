@@ -24,7 +24,7 @@ class Ad_viewer_ui : AppCompatActivity() {
 
         val Buton: Button = findViewById(R.id.SHin)
         Buton.setOnClickListener {
-            val intent = Intent(this@Ad_viewer_ui, CommonReg::class.java)
+            val intent = Intent(this@Ad_viewer_ui, ShowInterest::class.java)
             startActivity(intent)
         }
 
