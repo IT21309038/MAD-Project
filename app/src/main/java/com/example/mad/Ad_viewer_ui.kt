@@ -5,16 +5,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class Ad_viewer_ui : AppCompatActivity() {
-    private lateinit var  ad_int_btn: Button
-    private lateinit var del_upd: Button
     private lateinit var dbref : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
     private lateinit var SHJobsArrayList : ArrayList<SHJobs>
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
 
 
     @SuppressLint("MissingInflatedId")
@@ -22,10 +24,45 @@ class Ad_viewer_ui : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ad_viewer_ui)
 
+        auth = FirebaseAuth.getInstance()
+
         val Buton: Button = findViewById(R.id.SHin)
         Buton.setOnClickListener {
             val intent = Intent(this@Ad_viewer_ui, ShowInterest::class.java)
             startActivity(intent)
+        }
+
+        val btn7 = findViewById<Button>(R.id.del_btn)
+        btn7.setOnClickListener {
+            val user = auth.currentUser
+            user?.delete()?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Delete successful, delete associated data in the database
+                    dbref.child(user.uid).setValue(null)
+                        .addOnSuccessListener {
+                            // Deletion of associated data successful, sign out user and navigate to login screen
+                            auth.signOut()
+                            val intent = Intent(this@Ad_viewer_ui, loginadviewer::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        .addOnFailureListener {
+                            // Deletion of associated data failed, display error message
+                            Toast.makeText(
+                                this@Ad_viewer_ui,
+                                "Failed to delete user data. Please try again.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                } else {
+                    // Delete failed, display error message
+                    Toast.makeText(
+                        this@Ad_viewer_ui,
+                        "Failed to delete user profile. Please try again.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
         }
 
         userRecyclerview = findViewById(R.id.AVRC)
