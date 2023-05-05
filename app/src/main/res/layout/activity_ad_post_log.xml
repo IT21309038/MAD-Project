@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/Txt3"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/LOG"
         android:textAlignment="center"
@@ -35,7 +35,7 @@
 
     <EditText
         android:id="@+id/Uname1"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Uname"
@@ -52,7 +52,7 @@
 
     <EditText
         android:id="@+id/Pwd1"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Pwd"
@@ -69,8 +69,8 @@
 
     <Button
         android:id="@+id/Btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
         android:backgroundTint="@color/BTn"
         android:text="@string/Log"
         android:textColor="@color/Text"
@@ -84,47 +84,17 @@
 
     <Button
         android:id="@+id/Btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
         android:backgroundTint="@color/BTn"
         android:text="@string/Reset"
         android:textColor="@color/Text"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/Txt16"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Btn1" />
 
-    <TextView
-        android:id="@+id/Txt16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Fpwd"
-        android:textAlignment="center"
-        android:textColor="@color/Text"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/Btn8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Btn2" />
-
-    <Button
-        android:id="@+id/Btn8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/BTn"
-        android:text="@string/Clk"
-        android:textAlignment="center"
-        android:textColor="@color/Text"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Txt16" />
 </androidx.constraintlayout.widget.ConstraintLayout>

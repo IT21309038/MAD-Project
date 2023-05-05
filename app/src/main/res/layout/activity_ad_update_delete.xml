@@ -8,8 +8,8 @@
     tools:context=".AdUpdateDelete">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="0dp"
+        android:id="@+id/UPCname"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Cname"
@@ -17,7 +17,7 @@
         android:textColor="@color/Txt"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/UPCposition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,22 +25,22 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/Up"
         android:textAlignment="center"
         android:textColor="@color/Text"
         android:textSize="32sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/UPCname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="0dp"
+        android:id="@+id/UPCposition"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Pos"
@@ -48,15 +48,15 @@
         android:textColor="@color/Txt"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintBottom_toTopOf="@+id/UPCmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/UPCname" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="0dp"
+        android:id="@+id/UPCmail"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Cmail"
@@ -64,15 +64,15 @@
         android:textColor="@color/Txt"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintBottom_toTopOf="@+id/UPCdes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/UPCposition" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="0dp"
+        android:id="@+id/UPCdes"
+        android:layout_width="411dp"
         android:layout_height="193dp"
         android:ems="10"
         android:gravity="start|top"
@@ -85,29 +85,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/UPCmail" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
         android:backgroundTint="@color/BTn"
         android:text="@string/Up1"
-        android:textColor="@color/Text"
-        android:textSize="28sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/BTn"
-        android:text="@string/Delete"
         android:textColor="@color/Text"
         android:textSize="28sp"
         android:textStyle="italic"
@@ -115,6 +100,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/UPCdes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

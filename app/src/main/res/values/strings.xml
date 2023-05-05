@@ -7,7 +7,7 @@
     <string name="Lname">Last Name</string>
     <string name="Mail">Email</string>
     <string name="Phn">Phone</string>
-    <string name="Uname">Username</string>
+    <string name="Uname">User email</string>
     <string name="Pwd">Password</string>
     <string name="Repwd">Retype Password</string>
     <string name="Sub">Submit</string>
@@ -41,9 +41,9 @@
     <string name="RasAdP">Register as Ad Poster</string>
     <string name="RasAdV">Register as Ad Viewer</string>
     <string name="Fpwd">Forgot Password, No Worries</string>
-    <string name="Clk">Click Here</string>
+    <string name="Clk">Update Password</string>
     <string name="Fpass">Forgetting your password is okay, You are just one step from updating it to a new password</string>
-    <string name="Nname">Enter Username</string>
+    <string name="Nname">Enter User Email</string>
     <string name="Npwd">Enter new Password</string>
     <string name="Rnpwd">Re Enter new Password</string>
     <string name="Up2">Update Password</string>
