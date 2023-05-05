@@ -8,37 +8,22 @@
     tools:context=".DeportUI">
 
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="false"
-        app:closeIcon="@drawable/baseline_cancel_24"
-        app:iconifiedByDefault="false"
-        app:queryHint="Search..."
-        app:searchHintIcon="@null"
-        app:searchIcon="@drawable/baseline_search_24"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="342dp" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="183dp"
-        android:layout_height="191dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="136dp"
+        android:id="@+id/AVRC"
+        android:layout_width="413dp"
+        android:layout_height="524dp"
         android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ad_int_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome_adviewer"
+        tools:listitem="@layout/jvcard" />
 
     <Button
         android:id="@+id/ad_int_btn"
         android:layout_width="182dp"
         android:layout_height="63dp"
-        android:layout_marginEnd="119dp"
         android:backgroundTint="@color/BTN"
         android:text="@string/addInt"
         android:textColor="@color/text"
@@ -46,59 +31,55 @@
         android:textColorLink="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/del_upd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="532dp"
-        android:layout_height="249dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_adviewer"
-        app:srcCompat="@drawable/resource__" />
+        app:layout_constraintTop_toBottomOf="@+id/AVRC" />
 
     <Button
         android:id="@+id/del_upd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="113dp"
         android:backgroundTint="@color/BTN"
         android:text="@string/und"
         android:textColor="@color/text"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/del_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ad_int_btn" />
 
     <Button
         android:id="@+id/del_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="112dp"
         android:backgroundTint="@color/BTN"
         android:text="@string/delete"
         android:textColor="@color/text"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/del_upd" />
 
     <TextView
         android:id="@+id/welcome_adviewer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="61dp"
         android:allowUndo="false"
         android:text="@string/Wad"
         android:textColor="@color/text"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/AVRC"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
