@@ -101,5 +101,7 @@
     <string name="H8">********</string>
     <string name="A14">LOGIN</string>
     <string name="A15">Forget Password?</string>
+    <string name="UPADV">Update your details</string>
+    <string name="UPDBt">Update</string>
 
 </resources>
