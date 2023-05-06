@@ -56,6 +56,7 @@
     <string name="Uppass">Update Password</string>
 
 
+
     <string name="title_activity_admin_login">Admin_login</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -93,17 +94,71 @@
     <string name="dis_del">Can you please share us what was not working? we are fixing bugs as soon as we spot them. If something slipped through our fingers we\'d be grateful to be aware of it and fix it.</string>
     <string name="explain1">Your explanation is entirely optional</string>
     <string name="confirm_del">Confirm deletion</string>
+
+
+    <string name="fpwd">Welcome back  you\'ve been missed !</string>
+    <string name="fcpwd">"Change your password "</string>
+    <string name="fhello">Hello Again !</string>
+    <string name="fbtn">SUBMIT</string>
+    <string name="femail">Email</string>
+    <string name="fnpwd">New Password</string>
+    <string name="frnpwd">Re enter New password</string>
+    <string name="Psumma">SUMMARY</string>
+    <string name="payment">Payment Method</string>
+    <string name="ptot">Total Amount</string>
+    <string name="pcname">Card Name</string>
+    <string name="phname">Card Holder Name</string>
+    <string name="pcnumber">Card Number</string>
+    <string name="pcexpiry">Expiry</string>
+    <string name="pcvc">CVC</string>
+    <string name="pabtnpay">PAY</string>
+    <string name="rs">RS 00.00</string>
+    <string name="A1">card Name</string>
+    <string name="A2">Name</string>
+    <string name="H1">***</string>
+    <string name="H2">MM/DD</string>
+    <string name="H3">****</string>
+    <string name="H4">RS  00.00</string>
+    <string name="A3">Ad Value :-</string>
+    <string name="A4">Add Card Method</string>
+    <string name="A5">Email</string>
+    <string name="H5">****@gmail.com</string>
+    <string name="A6">Pay Now</string>
+    <string name="A7">Credit Card</string>
+    <string name="A8">Debit Card</string>
+    <string name="A9">Add Payment Method</string>
     <string name="A10">"WELCOME "</string>
-    <string name="A11">Ad Viewer</string>
+    <string name="A11">Ad Viewer</string>
+
     <string name="H7">Enter your email</string>
     <string name="A12">Email</string>
     <string name="A13">Password</string>
     <string name="H8">********</string>
     <string name="A14">LOGIN</string>
     <string name="A15">Forget Password?</string>
+
     <string name="UPADV">Update your details</string>
     <string name="UPDBt">Update</string>
     <string name="LGout">Logout</string>
     <string name="ADVPWUP">Update Password</string>
+
+    <string name="A16">"Forgot "</string>
+    <string name="A17">Password ?</string>
+    <string name="A18">Don\'t worry ! it happens. Please enter the address and New password associate with your Account.</string>
+    <string name="H9">Email  ID</string>
+    <string name="H10">Enter Password</string>
+    <string name="H11">Enter New Password</string>
+    <string name="B1">SUBMIT</string>
+    <string name="A19">Hello Again !</string>
+    <string name="A20">Welcome back  you\'ve been missed !</string>
+    <string name="H13">Email</string>
+    <string name="H14">New Password</string>
+    <string name="H15">Re enter New password</string>
+    <string name="A21">"Change your password "</string>
+    <string name="A22">SUBMIT</string>
+    <string name="holder_name">Holder Name</string>
+    <string name="type">Type</string>
+    <string name="ViewInq">View Inquiries</string>
+    <string name="uppass">Update Password</string>
 
 </resources>

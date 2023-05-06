@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,6 +36,28 @@
             android:exported="false" />
         <activity
             android:name=".Admin_login"
+            android:exported="false"/>
+        <activity
+            android:name=".bill_summary"
+            android:exported="false" />
+        <activity
+            android:name=".admin_dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".payment_portal"
+            android:exported="false" />
+        <activity
+            android:name=".admin_password_update"
+            android:exported="false" />
+        <activity
+            android:name=".loginadviewer"
+            android:exported="false" />
+        <activity
+            android:name=".update_adviewer"
+            android:exported="false" />
+        <activity
+            android:name=".payments"
+
             android:exported="false" />
         <activity
             android:name=".AdminDash"

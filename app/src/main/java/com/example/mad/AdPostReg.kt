@@ -43,6 +43,7 @@ class AdPostReg : AppCompatActivity() {
 
 
 
+
         submit.setOnClickListener {
             var firstN: String = ""
             var lastN: String = ""
