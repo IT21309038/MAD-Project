@@ -38,22 +38,31 @@ class Ad_viewer_ui : AppCompatActivity() {
             user?.delete()?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Delete successful, delete associated data in the database
-                    dbref.child(user.uid).setValue(null)
-                        .addOnSuccessListener {
-                            // Deletion of associated data successful, sign out user and navigate to login screen
+                    dbref.child(user.uid).removeValue().addOnSuccessListener {
+                        // Deletion of associated data successful, delete interests of the user in interests table
+                        val interestsRef = FirebaseDatabase.getInstance().getReference("interests")
+                        interestsRef.child(user.uid).removeValue().addOnSuccessListener {
+                            // Deletion of interests successful, sign out user and navigate to login screen
                             auth.signOut()
-                            val intent = Intent(this@Ad_viewer_ui, loginadviewer::class.java)
+                            val intent = Intent(this@Ad_viewer_ui, CommonReg::class.java)
                             startActivity(intent)
                             finish()
-                        }
-                        .addOnFailureListener {
-                            // Deletion of associated data failed, display error message
+                        }.addOnFailureListener {
+                            // Deletion of interests failed, display error message
                             Toast.makeText(
                                 this@Ad_viewer_ui,
-                                "Failed to delete user data. Please try again.",
+                                "Failed to delete user interests. Please try again.",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
+                    }.addOnFailureListener {
+                        // Deletion of associated data failed, display error message
+                        Toast.makeText(
+                            this@Ad_viewer_ui,
+                            "Failed to delete user data. Please try again.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 } else {
                     // Delete failed, display error message
                     Toast.makeText(
