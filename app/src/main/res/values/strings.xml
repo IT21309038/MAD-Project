@@ -72,7 +72,7 @@
     <string name="pcvc">CVC</string>
     <string name="pabtnpay">PAY</string>
     <string name="rs">RS 00.00</string>
-    <string name="A1">Name</string>
+    <string name="A1">card Name</string>
     <string name="A2">Name</string>
     <string name="H1">***</string>
     <string name="H2">MM/DD</string>
@@ -109,4 +109,7 @@
     <string name="A21">"Change your password "</string>
     <string name="A22">SUBMIT</string>
     <string name="holder_name">Holder Name</string>
+    <string name="type">Type</string>
+    <string name="ViewInq">View Inquiries</string>
+    <string name="uppass">Update Password</string>
 </resources>

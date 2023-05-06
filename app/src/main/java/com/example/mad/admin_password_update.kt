@@ -1,17 +1,15 @@
 package com.example.mad
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
-class update_adviewer : AppCompatActivity() {
+class admin_password_update : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var user: FirebaseUser
@@ -20,18 +18,16 @@ class update_adviewer : AppCompatActivity() {
     private lateinit var updateBtn: Button
 
     private lateinit var firebaseAuth: FirebaseAuth
-
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update_adviewer)
+        setContentView(R.layout.activity_admin_password_update)
 
         mAuth = FirebaseAuth.getInstance()
         user = mAuth.currentUser!!
 
-        newPassword = findViewById(R.id.editTextTextPassword4)
-        confirmPassword = findViewById(R.id.editTextTextPassword5)
-        updateBtn = findViewById(R.id.button4)
+        newPassword = findViewById(R.id.editTextTextPassword3)
+        confirmPassword = findViewById(R.id.editTextTextPassword2)
+        updateBtn = findViewById(R.id.button3)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -49,7 +45,7 @@ class update_adviewer : AppCompatActivity() {
                         ).show()
 
                         // Start the AdPostDash activity
-                        val intent = Intent(this, loginadviewer::class.java)
+                        val intent = Intent(this,admin_dashboard::class.java)
                         startActivity(intent)
                         finish() // Close this activity to prevent the user from going back to it using the back button
                     } else {
@@ -70,4 +66,3 @@ class update_adviewer : AppCompatActivity() {
         }
     }
 }
-

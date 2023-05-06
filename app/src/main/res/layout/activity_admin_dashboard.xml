@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_dashboard">
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="171dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="-380dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logomad" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="384dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:srcCompat="@drawable/bootstrap_admin_dashboard_templates" />
+
+    <Button
+        android:id="@+id/buttonup"
+        android:layout_width="302dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/Vinq"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="308dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/uppass"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
