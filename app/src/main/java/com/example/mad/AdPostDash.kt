@@ -70,10 +70,21 @@ class AdPostDash : AppCompatActivity() {
             }
         }
 
-        val btn8 = findViewById<Button>(R.id.Btn8)
-        btn8.setOnClickListener {
+        val btn2 = findViewById<Button>(R.id.btn2)
+        btn2.setOnClickListener {
             val intent = Intent(this@AdPostDash, ForgotPassword::class.java)
             startActivity(intent)
+        }
+
+        val logoutButton: Button = findViewById(R.id.LGout)
+        logoutButton.setOnClickListener {
+            // Perform logout action here
+            // For example, clear user session data or sign the user out of your backend
+            // Then navigate to CommonLog activity
+            val intent = Intent(this, AdPostLog::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
         }
 
         val btn5 = findViewById<Button>(R.id.Btn5)

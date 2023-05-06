@@ -103,5 +103,6 @@
     <string name="A15">Forget Password?</string>
     <string name="UPADV">Update your details</string>
     <string name="UPDBt">Update</string>
+    <string name="LGout">Logout</string>
 
 </resources>
