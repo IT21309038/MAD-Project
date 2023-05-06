@@ -101,14 +101,14 @@
         android:layout_width="258dp"
         android:layout_height="63dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="101dp"
         android:backgroundTint="#7681AE"
         android:text="@string/A14"
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <TextView
         android:id="@+id/textView6"
@@ -123,20 +123,5 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="228dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#00FFFFFF"
-        android:text="@string/A15"
-        android:textAllCaps="true"
-        android:textColor="#083568"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

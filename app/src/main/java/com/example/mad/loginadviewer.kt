@@ -21,19 +21,14 @@ class loginadviewer : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
 
 
-    private lateinit var  btnup1: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_adviewer)
         mAuth = FirebaseAuth.getInstance()
 
 
-        btnup1= findViewById(R.id.button2)
 
-        btnup1 .setOnClickListener {
-            val intent = Intent(this,payments::class.java)
-            startActivity(intent)
-        }
 
         val emailEditText = findViewById<EditText>(R.id.editTextTextPersonName)
         val passwordEditText = findViewById<EditText>(R.id.editTextTextPassword)
@@ -49,7 +44,7 @@ class loginadviewer : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         val user: FirebaseUser? = mAuth.currentUser
-                        val intent = Intent(this, update_adviewer::class.java)
+                        val intent = Intent(this, Ad_viewer_ui::class.java)
                         startActivity(intent)
                         finish()
                     } else {

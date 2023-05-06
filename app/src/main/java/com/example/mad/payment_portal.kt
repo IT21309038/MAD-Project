@@ -1,6 +1,7 @@
 package com.example.mad
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -82,6 +83,9 @@ class payment_portal : AppCompatActivity() {
 
             val payment = Payment(adValue, paymentType, cardName, cardHolderName, cardNumber, exp, cvc)
             savePaymentToDatabase(payment)
+
+            val intent = Intent(this@payment_portal, AdPostDash::class.java)
+            startActivity(intent)
 
             clearEditTexts()
         }

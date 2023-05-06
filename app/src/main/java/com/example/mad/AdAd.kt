@@ -1,5 +1,6 @@
 package com.example.mad
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -58,6 +59,8 @@ class AdAd : AppCompatActivity() {
                 .addOnSuccessListener {
                     // Show a toast message when the data is successfully added
                     Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@AdAd, payments::class.java)
+                    startActivity(intent)
                 }
                 .addOnFailureListener {
                     // Show an error message when the data could not be added

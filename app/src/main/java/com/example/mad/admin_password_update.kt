@@ -45,7 +45,7 @@ class admin_password_update : AppCompatActivity() {
                         ).show()
 
                         // Start the AdPostDash activity
-                        val intent = Intent(this,admin_dashboard::class.java)
+                        val intent = Intent(this,Admin_login::class.java)
                         startActivity(intent)
                         finish() // Close this activity to prevent the user from going back to it using the back button
                     } else {
