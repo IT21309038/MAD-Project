@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".update_adviewer">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="382dp"
+        android:layout_height="306dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="-13dp"
+        android:src="@drawable/how_to_change_website_and_hosting_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="-370dp"
+        android:layout_marginTop="23dp"
+        android:background="#0E595C"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="224dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="-306dp"
+        android:layout_marginTop="221dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/A19"
+        android:textAlignment="center"
+        android:textColor="#9EEAE3"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="-363dp"
+        android:layout_marginTop="280dp"
+        android:text="@string/A20"
+        android:textAlignment="center"
+        android:textColor="#083568"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="@string/H13"
+        android:inputType="textEmailAddress"
+        android:textColor="#121111"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword4"
+        android:layout_width="308dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/H14"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword5"
+        android:layout_width="308dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/H15"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="318dp"
+        android:layout_height="45dp"
+        android:layout_margin="16dp"
+        android:background="#E6DBDB"
+        android:backgroundTint="#008EBFF4"
+        android:text="@string/A21"
+        android:textAlignment="center"
+        android:textColor="#083568"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_marginBaseline="16dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="211dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#7681AE"
+        android:text="@string/A22"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword5" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="39dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="41dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:srcCompat="@drawable/icons8_lock_orientation_96" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="39dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/icons8_password_reset_80" />
+</androidx.constraintlayout.widget.ConstraintLayout>
