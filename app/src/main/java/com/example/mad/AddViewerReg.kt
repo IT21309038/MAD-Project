@@ -66,7 +66,7 @@ class AddViewerReg : AppCompatActivity() {
                                 val newUser = User(name, email, phone)
                                 database.getReference("viewers").child(userId).setValue(newUser)
                                 Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
-                                startActivity(Intent(this, MainActivity::class.java))
+                                startActivity(Intent(this, loginadviewer::class.java))
                                 finish()
                             } else {
                                 Toast.makeText(this, "Registration failed: user is null", Toast.LENGTH_SHORT).show()

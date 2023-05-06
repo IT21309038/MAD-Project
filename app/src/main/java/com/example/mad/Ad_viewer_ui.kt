@@ -38,6 +38,12 @@ class Ad_viewer_ui : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val Buton2: Button = findViewById(R.id.SHin3)
+        Buton2.setOnClickListener {
+            val intent = Intent(this@Ad_viewer_ui, Inquiry::class.java)
+            startActivity(intent)
+        }
+
         val btn7 = findViewById<Button>(R.id.del_btn)
         btn7.setOnClickListener {
             val user = auth.currentUser

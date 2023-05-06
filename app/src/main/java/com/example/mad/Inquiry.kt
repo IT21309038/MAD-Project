@@ -1,5 +1,6 @@
 package com.example.mad
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -34,14 +35,17 @@ class Inquiry : AppCompatActivity() {
             val Message = MessageEditText.text.toString()
 
             // Create an Inquiry object
-            val inquiry = InquiryModel(Email, Phone, Message)
+            val inquiry = InquiryModel(null, Email, Phone, Message)
+            val inquiryRef = database.push()
 
             // Save the inquiry object to the database
-            val inquiryId = database.push().key
-            database.child(inquiryId!!).setValue(inquiry)
+            inquiry.id = inquiryRef.key
+            inquiryRef.setValue(inquiry.toMap())
                 .addOnSuccessListener {
                     // Show a toast message when the data is successfully added
                     Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, Ad_viewer_ui::class.java)
+                    startActivity(intent)
                 }
                 .addOnFailureListener {
                     // Show an error message when the data could not be added
@@ -75,6 +79,9 @@ class Inquiry : AppCompatActivity() {
                                         "Data updated successfully",
                                         Toast.LENGTH_SHORT
                                     ).show()
+                                    val intent = Intent(this@Inquiry, Ad_viewer_ui::class.java)
+                                    startActivity(intent)
+
                                 }
                                 .addOnFailureListener {
                                     // Show an error message when the data could not be updated
@@ -97,15 +104,17 @@ class Inquiry : AppCompatActivity() {
 }
 
 data class InquiryModel(
+    var id: String? = null,
     val email: String = "",
     val Phone: String = "",
     val message: String = ""
 ) {
     fun toMap(): Map<String, Any?> {
         return mapOf(
+            "id" to id,
             "email" to email,
             "Phone" to Phone,
             "message" to message
-            )
-        }
+        )
+    }
 }
