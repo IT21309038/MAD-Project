@@ -8,21 +8,6 @@
     tools:context=".DeportUI">
 
 
-    <Button
-        android:id="@+id/SHin2"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
-        android:backgroundTint="@color/BTN"
-        android:text="@string/ADVPWUP"
-        android:textColor="@color/text"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/del_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SHin" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/AVRC"
         android:layout_width="413dp"
@@ -36,26 +21,11 @@
         tools:listitem="@layout/jvcard" />
 
     <Button
-        android:id="@+id/SHin"
-        android:layout_width="170dp"
-        android:layout_height="70dp"
-        android:backgroundTint="@color/BTN"
-        android:text="@string/und"
-        android:textColor="@color/text"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/SHin2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AVRC" />
-
-    <Button
         android:id="@+id/del_btn"
         android:layout_width="170dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:backgroundTint="@color/BTN"
-        android:text="@string/delete"
+        android:text="@string/deleteSE"
         android:textColor="@color/text"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -64,6 +34,51 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SHin2" />
+
+    <Button
+        android:id="@+id/SHin2"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/BTN"
+        android:text="@string/ADVPWUP"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/del_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SHin3" />
+
+    <Button
+        android:id="@+id/SHin"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/BTN"
+        android:text="@string/und"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SHin3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AVRC" />
+
+    <Button
+        android:id="@+id/SHin3"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/BTN"
+        android:text="@string/ADAI"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SHin2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SHin" />
 
     <TextView
         android:id="@+id/welcome_adviewer"

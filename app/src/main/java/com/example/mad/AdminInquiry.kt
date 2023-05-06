@@ -1,5 +1,6 @@
 package com.example.mad
 
+import ViewInquiry
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,35 +23,42 @@ class AdminInquiry : AppCompatActivity() {
 
         inquiryArrayList = arrayListOf<Iqview>()
         getInquiryData()
-
-
     }
-    private fun getInquiryData() {
 
+    private fun getInquiryData() {
         dbref = FirebaseDatabase.getInstance().getReference("inquiry")
 
         dbref.addValueEventListener(object : ValueEventListener{
-
             override fun onDataChange(snapshot: DataSnapshot) {
-
                 if (snapshot.exists()){
-
+                    inquiryArrayList.clear()
                     for (inquirySnapshot in snapshot.children){
                         val inquiry = inquirySnapshot.getValue(Iqview::class.java)
-                        inquiryArrayList.add(inquiry!!)
-
+                        inquiry!!.id = inquirySnapshot.key // Set inquiry id from the Firebase database
+                        inquiryArrayList.add(inquiry)
                     }
                     inquiryRecyclerview.adapter = ViewInquiry(inquiryArrayList)
                 }
-
             }
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                // Handle database read error
             }
-
         })
+    }
 
+    // Delete inquiry from the UI and the Firebase database
+    fun deleteInquiry(inquiry: Iqview) {
+        val inquiryId = inquiry.id
+        if (inquiryId != null) {
+            dbref.child(inquiryId).removeValue()
+                .addOnSuccessListener {
+                    // Remove inquiry from the UI
+                    inquiryArrayList.remove(inquiry)
+                    inquiryRecyclerview.adapter?.notifyDataSetChanged()
+                }
+                .addOnFailureListener {
+                    // Handle database write error
+                }
+        }
     }
 }
-
-

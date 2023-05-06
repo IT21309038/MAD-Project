@@ -81,7 +81,7 @@
     <string name="add"><![CDATA[<Display ads>]]></string>
     <string name="addInt">Add interest</string>
     <string name="und">View Interest</string>
-    <string name="delete">Delete account</string>
+    <string name="deleteSE">Delete account</string>
     <string name="login">Login to the system</string>
     <string name="password">password</string>
     <string name="loginad">Login as admin</string>
@@ -189,6 +189,6 @@
     <string name="pwd1">Enter Password</string>
     <string name="pwd2">Re-enter Password</string>
     <string name="view">All Inquiries of ad viewers and add posters</string>
-    <string name="delete">Delete</string>
+    <string name="ADAI">Add Inquiry</string>
 
 </resources>

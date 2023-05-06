@@ -9,6 +9,8 @@ import android.widget.Button
 class admin_dashboard : AppCompatActivity() {
 
     private lateinit var  btnup: Button
+    private lateinit var  btnup1: Button
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,14 @@ class admin_dashboard : AppCompatActivity() {
         btnup= findViewById(R.id.button9)
 
         btnup .setOnClickListener {
-            val intent = Intent(this,admin_password_update::class.java)
+            val intent = Intent(this@admin_dashboard,admin_password_update::class.java)
+            startActivity(intent)
+        }
+
+        btnup1= findViewById(R.id.buttonup)
+
+        btnup1 .setOnClickListener {
+            val intent = Intent(this@admin_dashboard,AdminInquiry::class.java)
             startActivity(intent)
         }
 
