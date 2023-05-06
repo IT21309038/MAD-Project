@@ -1,122 +1,87 @@
 package com.example.mad
 
-import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 
 class AddViewerReg : AppCompatActivity() {
 
-    private lateinit var enterFullname: EditText
-    private lateinit var enterEmail: EditText
-    private lateinit var enterPhone: EditText
-    private lateinit var enterPassword: EditText
-    private lateinit var reEnterPassword: EditText
-    private lateinit var submit: Button
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
-    private lateinit var usersRef: DatabaseReference
+    private lateinit var nameEditText: EditText
+    private lateinit var emailEditText: EditText
+    private lateinit var phoneEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var reEnterPasswordEditText: EditText
+    private lateinit var registerButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_viewer_reg)
+
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        usersRef = database.getReference("viewer")
 
+        nameEditText = findViewById(R.id.hint1)
+        emailEditText = findViewById(R.id.hint2)
+        phoneEditText = findViewById(R.id.hint3)
+        passwordEditText = findViewById(R.id.hint4)
+        reEnterPasswordEditText = findViewById(R.id.hint5)
+        registerButton = findViewById(R.id.btn2)
 
-        enterFullname = findViewById(R.id.hint1)
-        enterEmail = findViewById(R.id.hint2)
-        enterPhone = findViewById(R.id.hint3)
-        enterPassword = findViewById(R.id.hint4)
-        reEnterPassword = findViewById(R.id.hint5)
-        submit = findViewById(R.id.btn2)
+        registerButton.setOnClickListener {
+            val name = nameEditText.text.toString()
+            val email = emailEditText.text.toString()
+            val phone = phoneEditText.text.toString()
+            val password = passwordEditText.text.toString()
+            val reEnterPassword = reEnterPasswordEditText.text.toString()
 
-        submit.setOnClickListener {
-            var fullN: String = ""
-            var email: String = ""
-            var phone: String = ""
-            var password: String = ""
-            var repassword: String = ""
-
-            fullN = enterFullname.text.toString()
-            email = enterEmail.text.toString()
-            phone = enterPhone.text.toString()
-            password = enterPassword.text.toString()
-            repassword = reEnterPassword.text.toString()
-
-            if (TextUtils.isEmpty(fullN)) {
-                Toast.makeText(this@AddViewerReg, "Enter Full Name", Toast.LENGTH_SHORT).show()
-
+            if (TextUtils.isEmpty(name)) {
+                Toast.makeText(this, "Please enter your full name", Toast.LENGTH_SHORT).show()
             } else if (TextUtils.isEmpty(email)) {
-                Toast.makeText(this@AddViewerReg, "Enter Email", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "Please enter your email address", Toast.LENGTH_SHORT).show()
             } else if (TextUtils.isEmpty(phone)) {
-                Toast.makeText(this@AddViewerReg, "Enter Phone No", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show()
             } else if (TextUtils.isEmpty(password)) {
-                Toast.makeText(this@AddViewerReg, "Enter a Password", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(repassword)) {
-                Toast.makeText(this@AddViewerReg, "ReEnter Password", Toast.LENGTH_SHORT).show()
-
-            }
-            // Check if password and re-entered password match
-            if (password != repassword) {
-                Toast.makeText(this@AddViewerReg, "Passwords do not match", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show()
+            } else if (TextUtils.isEmpty(reEnterPassword)) {
+                Toast.makeText(this, "Please re-enter your password", Toast.LENGTH_SHORT).show()
+            } else if (password != reEnterPassword) {
+                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             } else {
-                // Call Firebase Authentication's createUserWithEmailAndPassword function
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
                             val user = auth.currentUser
-                            Toast.makeText(this@AddViewerReg, "Registration Successful", Toast.LENGTH_SHORT).show()
-
-                            // Save user information to Firebase Realtime Database
-                            val database = FirebaseDatabase.getInstance()
-                            val usersRef = database.getReference("viewer")
-
-                            val userData = HashMap<String, String>()
-                            userData["fullName"] = fullN
-                            userData["email"] = email
-                            userData["phone"] = phone
-
-                            usersRef.child(user!!.uid).setValue(userData)
-
-                            val intent = Intent(this, AdPostLog::class.java)
-                            startActivity(intent)
-                            finish()
-
-                            // Additional logic, e.g. navigate to next screen
+                            if (user != null) {
+                                val userId = user.uid
+                                val newUser = User(name, email, phone)
+                                database.getReference("viewers").child(userId).setValue(newUser)
+                                Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this, MainActivity::class.java))
+                                finish()
+                            } else {
+                                Toast.makeText(this, "Registration failed: user is null", Toast.LENGTH_SHORT).show()
+                            }
                         } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(ContentValues.TAG, "createUserWithEmail:failure", task.exception)
-                            Toast.makeText(this@AddViewerReg, "Registration failed. " + task.exception?.message, Toast.LENGTH_SHORT).show()
+                            if (task.exception is FirebaseAuthUserCollisionException) {
+                                Toast.makeText(this, "Registration failed: email already exists", Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
             }
-
-        }
-
-        // Retrieve the button from the layout
-        val clearButton: Button = findViewById(R.id.btn2)
-
-        clearButton.setOnClickListener {
-            // Clear the text in all the EditText fields
-            enterFullname.setText("")
-            enterEmail.setText("")
-            enterPhone.setText("")
-            enterPassword.setText("")
-            reEnterPassword.setText("")
         }
     }
 }
+
+data class User(val name: String, val email: String, val phone: String)
