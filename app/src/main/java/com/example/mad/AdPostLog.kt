@@ -1,5 +1,6 @@
 package com.example.mad
 
+
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -53,7 +54,7 @@ class AdPostLog : AppCompatActivity() {
                             Toast.makeText(this@AdPostLog, "Login successful", Toast.LENGTH_SHORT).show()
 
                             // Navigate to the AdPostLog activity
-                            val intent = Intent(this, AdPostDash::class.java)
+                            val intent = Intent(this@AdPostLog, AdPostDash::class.java)
                             startActivity(intent)
                             finish()
                         } else {

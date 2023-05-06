@@ -1,5 +1,6 @@
 package com.example.mad
 
+
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
@@ -11,12 +12,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
+
 import com.google.firebase.auth.FirebaseUser
 
 class loginadviewer : AppCompatActivity() {
 
     // Declare FirebaseAuth object
     private lateinit var mAuth: FirebaseAuth
+
 
     private lateinit var  btnup1: Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,9 +39,11 @@ class loginadviewer : AppCompatActivity() {
         val passwordEditText = findViewById<EditText>(R.id.editTextTextPassword)
         val loginButton = findViewById<Button>(R.id.buttonlog1)
 
+
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
+
 
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
@@ -60,8 +65,11 @@ class loginadviewer : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
+
                     }
                 }
         }
     }
+
 }
+
