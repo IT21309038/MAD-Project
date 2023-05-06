@@ -21,4 +21,7 @@
     <color name="white">#FFFFFF</color>
     <color name="text">#083568</color>
     <color name="BTN">#7681AE</color>
+    <color name="C1">#BEC4D6</color>
+    <color name="C3">#083568</color>
+    <color name="C4">#7681AE</color>
 </resources>

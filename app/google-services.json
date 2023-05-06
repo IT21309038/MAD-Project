@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "879148351192",
-    "project_id": "sass-cope-24916",
-    "storage_bucket": "sass-cope-24916.appspot.com"
+    "project_number": "946092838107",
+    "firebase_url": "https://mad-login-1081d-default-rtdb.firebaseio.com",
+    "project_id": "mad-login-1081d",
+    "storage_bucket": "mad-login-1081d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:879148351192:android:ca6479ede075c13a09e1ad",
+        "mobilesdk_app_id": "1:946092838107:android:caccadad0d6718a77890fe",
         "android_client_info": {
           "package_name": "com.example.mad"
         }
       },
       "oauth_client": [
         {
-          "client_id": "879148351192-k5uqb4oi2ng8jhmrvhk479k5i1au0evt.apps.googleusercontent.com",
+          "client_id": "946092838107-aigb1a9artv5lgfbkea4op3eujk7ai79.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB-20oR_jYU78Oo8APHiB_4xPaE0vzVsgs"
+          "current_key": "AIzaSyBurjbrJiFfsaGzN3f0o-w_H0zRBj_Bubk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "879148351192-k5uqb4oi2ng8jhmrvhk479k5i1au0evt.apps.googleusercontent.com",
+              "client_id": "946092838107-aigb1a9artv5lgfbkea4op3eujk7ai79.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
