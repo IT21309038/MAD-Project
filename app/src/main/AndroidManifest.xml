@@ -36,6 +36,8 @@
             android:exported="false" />
         <activity
             android:name=".Admin_login"
+            android:exported="false"/>
+        <activity
             android:name=".bill_summary"
             android:exported="false" />
         <activity

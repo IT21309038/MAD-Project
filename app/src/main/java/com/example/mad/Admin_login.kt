@@ -35,7 +35,7 @@ class Admin_login : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         val user: FirebaseUser? = mAuth.currentUser
-                        val intent = Intent(this, AdminDash::class.java)
+                        val intent = Intent(this, admin_dashboard::class.java)
                         startActivity(intent)
                         finish()
                     } else {
