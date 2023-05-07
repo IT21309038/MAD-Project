@@ -23,7 +23,6 @@ class ViewInquiry(private val inquiryList : ArrayList<Iqview>) : RecyclerView.Ad
         val currentitem = inquiryList[position]
 
         holder.email.text = currentitem.email
-        holder.phone.text = currentitem.phone
         holder.message.text = currentitem.message
 
         holder.deleteJob.setOnClickListener {
@@ -50,7 +49,6 @@ class ViewInquiry(private val inquiryList : ArrayList<Iqview>) : RecyclerView.Ad
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val email: TextView = itemView.findViewById(R.id.em)
-        val phone: TextView = itemView.findViewById(R.id.pho)
         val message: TextView = itemView.findViewById(R.id.mess)
         val deleteJob: ImageView = itemView.findViewById(R.id.bin)
     }

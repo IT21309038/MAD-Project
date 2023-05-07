@@ -59,27 +59,9 @@ class AdPostReg : AppCompatActivity() {
             password = enterPassword.text.toString()
             repassword = reEnterPassword.text.toString()
 
-            if (TextUtils.isEmpty(firstN)) {
-                Toast.makeText(this@AdPostReg, "Enter First Name", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(lastN)) {
-                Toast.makeText(this@AdPostReg, "Enter Last Name", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(email)) {
-                Toast.makeText(this@AdPostReg, "Enter Email", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(phone)) {
-                Toast.makeText(this@AdPostReg, "Enter Phone No", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(password)) {
-                Toast.makeText(this@AdPostReg, "Enter a Password", Toast.LENGTH_SHORT).show()
-
-            } else if (TextUtils.isEmpty(repassword)) {
-                Toast.makeText(this@AdPostReg, "ReEnter Password", Toast.LENGTH_SHORT).show()
-
-            }
-            // Check if password and re-entered password match
-            if (password != repassword) {
+            if (firstN.isEmpty() || lastN.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty() || repassword.isEmpty()) {
+                Toast.makeText(this@AdPostReg, "Please fill all the fields", Toast.LENGTH_SHORT).show()
+            } else if (password != repassword) {
                 Toast.makeText(this@AdPostReg, "Passwords do not match", Toast.LENGTH_SHORT).show()
             } else {
                 // Call Firebase Authentication's createUserWithEmailAndPassword function
