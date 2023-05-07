@@ -34,6 +34,20 @@ class Inquiry : AppCompatActivity() {
             val Phone = PhoneEditText.text.toString()
             val Message = MessageEditText.text.toString()
 
+            if (Email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+                EmailEditText.error = "Please enter a valid email address"
+                return@setOnClickListener
+            }
+
+            if (Phone.isEmpty() || !android.util.Patterns.PHONE.matcher(Phone).matches()) {
+                PhoneEditText.error = "Please enter a valid phone number"
+                return@setOnClickListener
+            }
+
+            if (Message.isEmpty()) {
+                MessageEditText.error = "Please enter a message"
+                return@setOnClickListener
+            }
             // Create an Inquiry object
             val inquiry = InquiryModel(null, Email, Phone, Message)
             val inquiryRef = database.push()
@@ -63,6 +77,16 @@ class Inquiry : AppCompatActivity() {
             // Get the email and new message data from the UI elements
             val email = uEmailEditText.text.toString()
             val newMessage = uMessageEditText.text.toString()
+
+            if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                uEmailEditText.error = "Please enter a valid email address"
+                return@setOnClickListener
+            }
+
+            if (newMessage.isEmpty()) {
+                uMessageEditText.error = "Please enter a message"
+                return@setOnClickListener
+            }
 
             // Query the database to find the inquiry object with the matching email
             database.orderByChild("email").equalTo(email)

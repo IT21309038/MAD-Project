@@ -39,6 +39,16 @@ class loginadviewer : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
+            if (TextUtils.isEmpty(email)) {
+                emailEditText.error = "Please enter an email address"
+                return@setOnClickListener
+            }
+
+            if (TextUtils.isEmpty(password)) {
+                passwordEditText.error = "Please enter a password"
+                return@setOnClickListener
+            }
+
 
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->

@@ -72,6 +72,33 @@ class payments : AppCompatActivity() {
             val cardType = getDurationString(dRadioGroup.checkedRadioButtonId)
             val duration1 = getDurationString(IRadioGroup.checkedRadioButtonId)
 
+
+
+            val adValueEditText = findViewById<EditText>(R.id.editTextNumberDecimal)
+
+            if (adValueEditText.text.isNullOrEmpty()) {
+                adValueEditText.error = "Please enter a value for Ad-value"
+                return@setOnClickListener
+            }
+            val emailEditText = findViewById<EditText>(R.id.editTextTextEmailAddress3)
+
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailEditText.text.toString()).matches()) {
+                emailEditText.error = "Please enter a valid email address"
+                return@setOnClickListener
+            }
+
+            if (selectedCardName.isNullOrEmpty()) {
+                Toast.makeText(this, "Please select a card", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val cardTypeRadioGroup = findViewById<RadioGroup>(R.id.radiogroup1)
+
+            if (cardTypeRadioGroup.checkedRadioButtonId == -1) {
+                Toast.makeText(this, "Please select a card type", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             // Save the payment to the database with the selected card name
             savePaymentToDatabase(adValue, conMail, cardType, duration1, selectedCardName)
 

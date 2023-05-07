@@ -46,33 +46,45 @@ class AdAd : AppCompatActivity() {
             val jobDes = jobDesEditText.text.toString()
             val duration = getDurationString(durationRadioGroup.checkedRadioButtonId)
 
-            // Get the current user's UID
-            val uid = auth.currentUser?.uid
+            val emailEdit = findViewById<EditText>(R.id.ConMail)
 
-            // Create a Job object
-            val job = Job(null, comName, position, conMail, jobDes, duration, uid)
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailEdit.text.toString()).matches()) {
+                emailEdit.error = "Please enter a valid email address"
+                return@setOnClickListener
+            }
 
-            // Save the job object to the database with a unique ID
-            val newJobRef = database.child("jobs").push()
-            job.id = newJobRef.key
-            newJobRef.setValue(job.toMap())
-                .addOnSuccessListener {
-                    // Show a toast message when the data is successfully added
-                    Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@AdAd, payments::class.java)
-                    startActivity(intent)
-                }
-                .addOnFailureListener {
-                    // Show an error message when the data could not be added
-                    Toast.makeText(this, "Error: ${it.message}", Toast.LENGTH_SHORT).show()
-                }
+            // Check if any of the fields are empty
+            if (TextUtils.isEmpty(comName) || TextUtils.isEmpty(position) || TextUtils.isEmpty(conMail) || TextUtils.isEmpty(jobDes) || TextUtils.isEmpty(duration)) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+            } else {
+                // Get the current user's UID
+                val uid = auth.currentUser?.uid
 
-            // Clear the UI elements
-            comNameEditText.setText("")
-            positionEditText.setText("")
-            conMailEditText.setText("")
-            jobDesEditText.setText("")
-            durationRadioGroup.clearCheck()
+                // Create a Job object
+                val job = Job(null, comName, position, conMail, jobDes, duration, uid)
+
+                // Save the job object to the database with a unique ID
+                val newJobRef = database.child("jobs").push()
+                job.id = newJobRef.key
+                newJobRef.setValue(job.toMap())
+                    .addOnSuccessListener {
+                        // Show a toast message when the data is successfully added
+                        Toast.makeText(this, "Data added successfully", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@AdAd, payments::class.java)
+                        startActivity(intent)
+                    }
+                    .addOnFailureListener {
+                        // Show an error message when the data could not be added
+                        Toast.makeText(this, "Error: ${it.message}", Toast.LENGTH_SHORT).show()
+                    }
+
+                // Clear the UI elements
+                comNameEditText.setText("")
+                positionEditText.setText("")
+                conMailEditText.setText("")
+                jobDesEditText.setText("")
+                durationRadioGroup.clearCheck()
+            }
         }
 
 

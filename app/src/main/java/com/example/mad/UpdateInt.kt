@@ -35,6 +35,31 @@ class UpdateInt : AppCompatActivity() {
             val email = upMail.text.toString()
             val phone = upPhone.text.toString()
 
+            if (name.isBlank()) {
+                upName.error = "Name is required"
+                return@setOnClickListener
+            }
+
+            if (email.isBlank()) {
+                upMail.error = "Email is required"
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                upMail.error = "Invalid email format"
+                return@setOnClickListener
+            }
+
+            if (phone.isBlank()) {
+                upPhone.error = "Phone number is required"
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.PHONE.matcher(phone).matches()) {
+                upPhone.error = "Invalid phone number format"
+                return@setOnClickListener
+            }
+
             // update the database with the new values
             val database = FirebaseDatabase.getInstance()
             val interestRef = database.getReference("interests").child(interestId!!)
