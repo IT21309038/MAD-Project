@@ -7,14 +7,15 @@
     tools:context=".payments">
 
 
-    <Button
+    <TextView
         android:id="@+id/button5"
         android:layout_width="226dp"
         android:layout_height="77dp"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="95dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#BEC4D6"
         android:text="@string/Psumma"
+        android:textAlignment="center"
         android:textColor="#083568"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -29,7 +30,7 @@
         android:layout_marginTop="14dp"
         android:ems="10"
         android:hint="@string/H4"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView14"
@@ -176,8 +177,8 @@
         android:id="@+id/button11"
         android:layout_width="231dp"
         android:layout_height="79dp"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/C4"
         android:text="@string/A6"
         android:textSize="30sp"
