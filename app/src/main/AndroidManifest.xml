@@ -57,7 +57,24 @@
             android:exported="false" />
         <activity
             android:name=".payments"
-
+            android:exported="false" />
+         <activity
+            android:name=".InquiryCard"
+            android:exported="false" />
+        <activity
+            android:name=".InquiryAdd"
+            android:exported="false" />
+        <activity
+            android:name=".AddViewerReg"
+            android:exported="false" />
+        <activity
+            android:name=".AdminInquiry"
+            android:exported="false" />
+        <activity
+            android:name=".Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".Inquiry"
             android:exported="false" />
         <activity
             android:name=".AdminDash"

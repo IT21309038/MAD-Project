@@ -81,6 +81,49 @@ class payment_portal : AppCompatActivity() {
             val exp = expEditText.text.toString()
             val cvc = cvcEditText.text.toString()
 
+            if (adValue.isEmpty()) {
+                adValueEditText.error = "Ad value is required"
+                adValueEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (paymentType.isEmpty()) {
+                paymentTypeEditText.error = "Payment type is required"
+                paymentTypeEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (cardName.isEmpty()) {
+                cardNameEditText.error = "Card name is required"
+                cardNameEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (cardHolderName.isEmpty()) {
+                cardHolderNameEditText.error = "Card holder name is required"
+                cardHolderNameEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (cardNumber.isEmpty()) {
+                cardNumberEditText.error = "Card number is required"
+                cardNumberEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (exp.isEmpty()) {
+                expEditText.error = "Expiration date is required"
+                expEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (cvc.isEmpty()) {
+                cvcEditText.error = "CVC is required"
+                cvcEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+
             val payment = Payment(adValue, paymentType, cardName, cardHolderName, cardNumber, exp, cvc)
             savePaymentToDatabase(payment)
 

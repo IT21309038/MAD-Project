@@ -248,7 +248,7 @@
             android:layout_marginTop="1dp"
             android:ems="10"
             android:hint="@string/H4"
-            android:inputType="number"
+            android:inputType="none"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/imageView15" />

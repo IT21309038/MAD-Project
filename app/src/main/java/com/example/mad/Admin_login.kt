@@ -29,6 +29,14 @@ class Admin_login : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
+            if (email.isEmpty() || password.isEmpty()) {
+                // If any field is empty, display a message to the user and return early
+                Toast.makeText(
+                    baseContext, "Please fill in all fields.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
             // Attempt to sign in with user's email and password
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
