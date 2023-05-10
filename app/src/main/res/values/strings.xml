@@ -190,5 +190,7 @@
     <string name="pwd2">Re-enter Password</string>
     <string name="view">All Inquiries of ad viewers and add posters</string>
     <string name="ADAI">Add Inquiry</string>
+    <string name="btn6">Done</string>
+    <string name="Abill">Bill Summary</string>
 
 </resources>
