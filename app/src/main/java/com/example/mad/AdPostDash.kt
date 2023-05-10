@@ -81,7 +81,7 @@ class AdPostDash : AppCompatActivity() {
             // Perform logout action here
             // For example, clear user session data or sign the user out of your backend
             // Then navigate to CommonLog activity
-            val intent = Intent(this, AdPostLog::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()

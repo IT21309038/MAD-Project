@@ -30,12 +30,7 @@ class payments : AppCompatActivity() {
 
         FirebaseApp.initializeApp(this)
 
-        btn= findViewById(R.id.button5)
 
-        btn .setOnClickListener {
-            val intent = Intent(this,bill_summary::class.java)
-            startActivity(intent)
-        }
 
         // Get a reference to the Firebase database
         database = FirebaseDatabase.getInstance().reference
