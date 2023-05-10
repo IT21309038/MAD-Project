@@ -123,18 +123,27 @@ class payment_portal : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
-            val payment = Payment(adValue, paymentType, cardName, cardHolderName, cardNumber, exp, cvc)
+            val payment =
+                Payments(adValue, paymentType, cardName, cardHolderName, cardNumber, exp, cvc)
             savePaymentToDatabase(payment)
 
-            val intent = Intent(this@payment_portal, AdPostDash::class.java)
-            startActivity(intent)
+            // Create an intent to start the new activity
+            val intent = Intent(this@payment_portal, bill_summary::class.java)
 
+            // Pass the selected values as extras to the intent
+            intent.putExtra("adValue", adValue)
+            intent.putExtra("paymentType", paymentType)
+            intent.putExtra("cardName", cardName)
+            intent.putExtra("cardHolderName", cardHolderName)
+            // Pass the paymentId
+            intent.putExtra("paymentId", paymentId)
+            startActivity(intent)
             clearEditTexts()
+
         }
     }
 
-    private fun savePaymentToDatabase(payment: Payment) {
+    private fun savePaymentToDatabase(payment: Payments) {
         val paymentRef = database.push()
         paymentRef.setValue(payment.toMap())
             .addOnSuccessListener {
@@ -155,7 +164,7 @@ class payment_portal : AppCompatActivity() {
         cvcEditText.text.clear()
     }
 
-    data class Payment(
+    data class Payments(
         val adValue: String? = null,
         val paymentType: String? = null,
         val cardName: String? = null,
