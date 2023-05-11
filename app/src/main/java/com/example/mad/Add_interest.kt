@@ -48,6 +48,36 @@ class Add_interest : AppCompatActivity() {
             val eHint = eHintEditText.text.toString()
             val phHint = phHintEditText.text.toString()
 
+            if (user.isEmpty()) {
+                userEditText.error = "Please enter a name"
+                userEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (eHint.isEmpty()) {
+                eHintEditText.error = "Please enter an email"
+                eHintEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(eHint).matches()) {
+                eHintEditText.error = "Please enter a valid email"
+                eHintEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (phHint.isEmpty()) {
+                phHintEditText.error = "Please enter a phone number"
+                phHintEditText.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.PHONE.matcher(phHint).matches()) {
+                phHintEditText.error = "Please enter a valid phone number"
+                phHintEditText.requestFocus()
+                return@setOnClickListener
+            }
+
             // Retrieve the job data from the Firebase database
             jobId?.let { nonNullJobId ->
                 jobsRef.child(nonNullJobId).get().addOnSuccessListener { jobSnapshot ->

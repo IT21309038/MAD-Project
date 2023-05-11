@@ -15,6 +15,11 @@ class CommonReg : AppCompatActivity() {
             val intent = Intent(this@CommonReg, AdPostReg::class.java)
             startActivity(intent)
         }
+        val img9: ImageView = findViewById(R.id.Img9)
+        img9.setOnClickListener {
+            val intent = Intent(this@CommonReg, AddViewerReg::class.java)
+            startActivity(intent)
+        }
 
     }
 }

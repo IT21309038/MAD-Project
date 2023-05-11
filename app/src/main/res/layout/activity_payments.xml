@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payments">
+
+
+    <TextView
+        android:id="@+id/button5"
+        android:layout_width="226dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#BEC4D6"
+        android:text="@string/Psumma"
+        android:textAlignment="center"
+        android:textColor="#083568"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="@string/H4"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="186dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/A3"
+        android:textColor="@color/C3"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="250dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/A4"
+        android:textColor="#083568"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#0B1532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="146dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/A5"
+        android:textAlignment="textStart"
+        android:textColor="#083568"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress3"
+        android:layout_width="357dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="@string/H5"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/A9"
+        android:textColor="#083568"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup1" />
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup1"
+        android:layout_width="358dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="192dp"
+            android:layout_height="84dp"
+            android:text="@string/A7"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="174dp"
+            android:layout_height="match_parent"
+            android:text="@string/A8"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radiogroup2"
+        android:layout_width="378dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:outlineProvider="background"
+            app:srcCompat="@drawable/american_express" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="132dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/icons8_mastercard_logo_96" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="129dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/visa" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="231dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/C4"
+        android:text="@string/A6"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
